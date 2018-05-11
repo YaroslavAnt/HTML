@@ -1,0 +1,88 @@
+body{font-family: 'Dosis', sans-serif;}
+header{color: white; background: black}
+.col-4{padding-left: 0px}
+h1{
+	font-size: 5em; 
+	font-weight: normal; 
+	margin-bottom: 0px; 
+	margin-top: 0.1em;
+}
+header p{font-size: 2em; margin-top: 0.1em; color: #ccc}
+#blue, header a:hover{color: #009fc4}
+a{color: white;}
+header a{	 
+	font-size: 1.3em; 
+	margin-right: 20px;
+	text-decoration: none; 
+}
+ul{list-style-type: none; display: block;}
+li{float: left; margin-top: 10px}
+.mark{padding: 5px; width: 20px}
+.justify-content-between{margin-top: 20px}
+.center{text-align: center;}
+.first{
+	background: white;
+	left: 25%;
+	padding: 10px;
+	position: absolute;
+	width: 50%;
+	z-index: 10;
+}
+.second{
+	background: white;
+	margin-top: 5%;
+	padding: 10px;
+	position: relative;
+	height: 100%;
+	width: 45%;
+}
+.shadow{box-shadow: 0 20px 20px rgba(0,0,0,0.5)}
+
+
+main{
+	background:-webkit-radial-gradient(center,circle,#fff 0%, #ccc 100%); 
+	margin-top: -20px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+main h3{font-size: 2.5em; font-weight: normal; margin: 10px;}
+main img{width: 80%; padding: 5px; background: white}
+.underline{text-decoration: underline;}
+.button{background: #009fc4; padding: 5px 10px; color: white}
+.bold{font-weight: bold;}
+main li{list-style-type: disc; color: #009fc4; margin: 10px 0px}
+main li span{color: black}
+article{text-align: left; margin-bottom: 80px}
+.valign{vertical-align: middle;}
+main article+article, #border{border-left: 2px solid #fff}
+main h4{font-size: 3em; font-weight: normal; text-align: right; margin: -10px -20px; padding-top: 10px}
+main h5{font-weight: normal; font-size: 2em; text-align: right; margin: -20px;}
+main p{margin: 10px 0px}
+main a{color: black}
+
+
+section{background: #373737; color: white; padding: 50px}
+section img{width: 40%; padding: 5px; background: white; float: left; margin: 10px}
+section h3{font-size: 2.5em; font-weight: normal; margin: 10px;}
+section h4{font-size: 3em; font-weight: normal; text-align: right; margin: -10px -20px; padding-top: 0px}
+section h5{font-weight: normal; font-size: 2em; text-align: right; margin: -20px;}
+section p{margin-top: 0px}
+section div.col-12{margin-bottom: 80px}
+.button{display: inline-block; color: white; text-decoration: none; font-size: 1.7em; background: #009fc4; padding: 5px 10px;position: absolute; bottom: -60px}
+.button:hover{display: inline-block; color: #009fc4; background:#fff ; padding: 5px 10px}
+
+footer{background: black; color: white; padding: 50px}
+.sprite{
+	background: url(../images/nets.png) no-repeat;
+	display: inline-block;
+	height: 40px;
+	margin-left: 10px;
+	padding: 0px;
+	width: 40px;
+}
+.sprite:hover{opacity: 0.5}
+.sprite1{background-position: -45px}
+.sprite2{background-position: -90px}
+.sprite3{background-position: -135px}
+.sprite4{background-position: -180px}
+.sprite5{background-position: -225px}

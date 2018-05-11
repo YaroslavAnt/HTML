@@ -1,0 +1,126 @@
+body , html {padding: 0; margin: 0; background: black}
+.top1 {
+	background: url(../images/hero-image.jpg);
+	background-size: cover;
+	padding-bottom: 100px;	
+}
+.logo {
+	width: 200px;
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+.text1 {
+	margin: 0 auto;
+	width: 50%;
+	background: #ffffff;
+	position: relative;
+	top: 50px;
+	padding: 15px 30px;
+	margin-bottom: 50px;
+}
+h1 {font-size: 60px}
+h2 {font-size: 40px}
+h4 {color: white; font-size: 25px}
+p {font-size: 25px}
+hr.line1 {
+	position: relative; 
+	left: -250px;
+	width: 400px;
+	border-width: 2px;
+	border-color: orange;
+	border-style: solid; 
+}
+hr.line2 {
+	position: relative; 
+	left: -250px;
+	width: 700px;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid; 
+}
+.bottle {
+	position: absolute;
+	top: -50px;
+	right: -60px;
+	height: 550px;
+	z-index: 10
+}
+
+
+.top2 {
+	background: url(../images/history-bg.png) repeat-x;
+	margin-top: -50px;
+	position: relative;	
+	background-size: cover;
+	z-index: 5;
+}
+.born {
+	float: left;
+	width: 55%;
+	margin-top: 100px;
+	text-align: right;
+}
+.bornImg1 {
+	width: 80%;	
+	margin: 10px;
+}
+.bornImg2 {
+	width: 50%;
+	margin: 10px;
+}
+.text2 {
+	float: left;
+	width: 30%;
+	margin: 150px 30px 30px 30px;	
+}
+p.story {font-size: 30px}
+
+
+.top3 {
+	background: url(../images/sprits-bg.jpg);
+	background-size: cover;
+	position: relative;
+	margin-top: -50px;
+	padding-top: 50px;      /*не получилось затемнить картинку*/
+}
+p.spirits {
+	font-size: 50px; 
+	color: white; 
+	padding-top: 50px;
+	text-align: center;
+	opacity: 1
+}
+hr.line3 {
+	position: relative; 
+	width: 700px;
+	border-width: 2px;
+	border-color: orange;
+	border-style: solid;
+}
+.bottle1 {
+	text-align: center; 
+	float: left;
+	display: inline-block;
+	width: 20%;
+}
+
+
+.navigator {
+	position: fixed;
+	z-index: 20;
+	top: 40%;
+	right: 10px;
+ }
+ .navi {
+ 	width: 15px;
+ 	height: 15px;
+ 	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	margin: 5px
+ }
+ .navi:hover {
+ 	border-style: dotted;
+ 	background: white;
+ }

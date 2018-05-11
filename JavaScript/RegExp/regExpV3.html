@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<style>
+p{background: #ddd; margin: 0 20 10 30; padding: 10px;}
+div{background: #ddd; padding: 10px; width: 257;}
+</style>
+</head>
+<body>
+	<div>
+	<form name="sf">
+		Поиск:<input type="text" name="what" />
+		<input type="button" value="Start" />
+		<br />
+		<input type="checkbox" name="icase" />Игнорировать регистр<br/>
+		<input type="checkbox" name="glob" />Искать везде<br/>
+		<input type="checkbox" name="exact" />Точное соответствие
+	</form>
+	</div>
+	
+	<hr />
+	<p id="srcText" >
+		AceHTML 5 has a user friendly interface. In fact, it has ...
+		A product that's difficult to figure out, inefficient to use, or poorly supported is not going to win much of a user base. See whether you agree with these criteria for user-friendliness.
+	</p>
+		<hr />
+	<p id="res">
+	Result: <strong>0</strong> matches(match)  found
+	</p>
+
+	<script type="text/javascript">
+
+		var button=document.forms.sf.elements[1];
+		var string=document.getElementById('srcText').innerText;
+		var icase=document.forms.sf.elements.icase;
+		var global=document.forms.sf.elements.glob;
+		var exact=document.forms.sf.elements.exact;
+		var place=document.getElementsByTagName('strong')[0];
+		//var flags;
+
+		button.addEventListener('click', function(){
+			var word=document.forms['sf'].elements['what'].value;
+			var regExp;
+			var count; 
+			var flags='';
+
+			if(icase.checked) flags+='i';
+			if(global.checked) flags+='g';
+			if(exact.checked) word='\\b'+word+'\\b';
+
+			regExp= RegExp(word, flags);
+			count=(string.match(regExp)==null)?0:string.match(regExp).length;
+			place.innerText=count
+
+		})
+		
+	</script>
+
+</body>
+
+</html>

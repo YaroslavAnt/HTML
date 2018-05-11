@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<style type="text/css">
+		@keyframes move{
+			from{transform: translateX(20px); opacity: 0}
+			to{transform: translateX(-20px); opacity: 1}
+		}
+		body{
+			padding: 50px ;
+			background: url(bg.jpg);
+		}
+		img{
+			border: solid 1px #aaa;
+		}
+		form{
+			width: 500px;
+			text-align: center;
+			
+		}
+		fieldset{
+			position: relative;
+			background: #eee
+		}
+		form>input{
+			width: 100%;
+			height: 50px;
+			margin: 50px 0px;
+		}
+		#hint1, #hint2{
+			display: inline-block;
+			position: absolute;
+			z-index: 5;
+			top: 0;
+			right: -100px;
+			color: red;
+			display: none;
+		}
+		i{
+			font-size: 30px;
+			animation: move 1s infinite;
+			animation-direction: normal;
+			animation-timing-function: ease-out;
+		}
+		
+	</style>
+</head>
+<body>
+	<form name="burger">
+
+		<fieldset>
+			<legend>SELECT SIZE</legend>
+			<label for="">
+				<img width="100px" src="small.jpg">
+				<input type="radio" name="sizeburger" value="small"/>
+			</label>
+			<label for="">
+				<img width="100px" src="large.jpg">
+				<input type="radio" name="sizeburger" value="large"/>
+			</label>			
+			<div id="hint1">
+				<p>MAKE<br> YOUR<br> CHOICE</p>
+				<i class="fas fa-angle-double-left"></i>
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<legend>SELECT stuffing</legend>
+			<label for="">
+				<img width="100px" src="cheese.jpg">
+				<input type="checkbox" name="cheese" value="cheese"/>
+			</label>
+			<label for="">
+				<img width="100px" src="salad.jpg">
+				<input type="checkbox" name="salad" value="salad"/>
+			</label>
+			<label for="">
+				<img width="100px" src="potato.jpg">
+				<input type="checkbox" name="potato" value="potato"/>
+			</label>
+			<div id="hint2">
+				<p>MAKE<br> YOUR<br> CHOICE</p>
+				<i class="fas fa-angle-double-left"></i>
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<legend>SELECT topping</legend>
+			<label for="">
+				<img width="100px" src="mayonez.jpg">
+				<input type="checkbox" name="mayonez" value="mayonez"/>
+			</label>
+			<label for="">
+				<img width="100px" src="spice.jpg">
+				<input type="checkbox" name="spice" value="spice"/>
+			</label>
+		</fieldset>
+
+		<input type="button" value="order" name="order" >
+
+	</form>
+	<h3 id="result"></h3>
+
+	<script type="text/javascript">
+	'use strict'
+		var result=document.getElementById('result');
+		var but = document.forms.burger.elements.order;
+		var sizeburger = document.forms.burger.elements.sizeburger;
+		console.log(sizeburger);
+		var cheese =document.forms.burger.elements.cheese;
+		var salad =document.forms.burger.elements.salad;
+		var potato =document.forms.burger.elements.potato;
+		var mayonez=document.forms.burger.elements.mayonez;
+		var spice=document.forms.burger.elements.spice;
+		var hint1=document.getElementById('hint1');
+		var hint2=document.getElementById('hint2');
+
+		class Hamburger{
+			constructor(size, stuffing, topping){
+				this.size=size;
+				this.stuffing=stuffing; //Array!!!!!!!
+				this.topping=topping; //Array!!!!!!!
+			}
+			static createHamburger(){
+				return new Hamburger('small',['cheese','salad','potato'],['mayonez','spice']);//95
+			}
+			static get SMALLPRICE(){return 50}
+			static get LARGEPRICE(){return 100}
+			static get CHEESEPRICE(){return 10}
+			static get SALADPRICE(){return 20}
+			static get POTATOPRICE(){return 15}
+			static get MAYONEZPRICE(){return 20}
+			static get SPICEPRICE(){return 20}
+
+			static get SMALLCALORIFIC(){return 20}
+			static get LARGECALORIFIC(){return 40}
+			static get CHEESECALORIFIC(){return 20}
+			static get SALADCALORIFIC(){return 5}
+			static get POTATOCALORIFIC(){return 10}
+			static get MAYONEZCALORIFIC(){return 5}
+			static get SPICECALORIFIC(){return 0}
+
+			addTopping(){
+				var topp = [0,0];
+				if(this.topping[0]=='mayonez'){
+					topp[0]+=Hamburger.MAYONEZPRICE;
+					topp[1]+=Hamburger.MAYONEZCALORIFIC;
+				} 
+				if(this.topping[1]=='spice'){
+					topp[0]+=Hamburger.SPICEPRICE;
+					topp[1]+=Hamburger.SPICECALORIFIC;
+				} 
+				return topp
+			}
+
+			addStuffing(){
+				var stuff = [0,0];
+				if (this.stuffing[0]=='cheese'){
+					stuff[0]+=Hamburger.CHEESEPRICE;
+					stuff[1]+=Hamburger.CHEESECALORIFIC;
+				} 
+				if (this.stuffing[1]=='salad'){
+					stuff[0]+=Hamburger.SALADPRICE;
+					stuff[1]+=Hamburger.SALADCALORIFIC
+				} 
+				if (this.stuffing[2]=='potato'){
+					stuff[0]+=Hamburger.POTATOPRICE;
+					stuff[1]+=Hamburger.POTATOCALORIFIC
+				} 
+        return stuff
+			}
+
+			calculatePrice(){
+				//return 'price';
+				if(this.size=='small') return Hamburger.SMALLPRICE + this.addStuffing()[0] + this.addTopping()[0];
+				if(this.size=='large') return Hamburger.LARGEPRICE + this.addStuffing()[0] + this.addTopping()[0];
+				//else return null;
+			}			
+
+			calculateCalorific(){
+				//return 'price';
+				if(this.size=='small') return Hamburger.SMALLCALORIFIC + this.addStuffing()[1] + this.addTopping()[1];
+				if(this.size=='large') return Hamburger.LARGECALORIFIC + this.addStuffing()[1] + this.addTopping()[1];
+				else return null;
+			}
+		}
+
+		let newBurger = Hamburger.createHamburger();
+		console.log(newBurger.calculatePrice())
+		console.log(newBurger.calculateCalorific())
+
+		but.addEventListener('click', function(){
+			var cheeseCheck = (cheese.checked) ? cheese.value : null;
+			var saladCheck = (salad.checked) ? salad.value : null;
+			var potatoCheck = (potato.checked) ? potato.value : null;
+			var mayonezCheck = (mayonez.checked) ? mayonez.value : null;
+			var spiceCheck = (spice.checked) ? spice.value : null;
+			var burger = new Hamburger(sizeburger.value, [cheeseCheck,saladCheck,potatoCheck], [mayonezCheck, spiceCheck]);
+			var flag=true;
+			hint1.style.display='none';
+			hint2.style.display='none';
+
+			if(!sizeburger.value){
+				flag=false;
+				hint1.style.display='inline-block';				
+			} 
+			if(!(salad.checked||potato.checked||cheese.checked)){
+				flag=false;
+				hint2.style.display='inline-block'
+			}
+			if(flag){
+				result.innerHTML='Burger costs '+burger.calculatePrice() +' UAH. Calorific value: '+burger.calculateCalorific()+' calories'
+			}			
+		})
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+body{
+	text-align: center;
+	padding: 5px;
+}
+/*??????????????*/
+header{
+	color: #888;
+}
+nav{
+	text-align: left;
+}
+h2,h3,h4,p{
+	font-weight: 600;
+}
+h2{
+	font-size: 3.3em;
+	color: black;
+}
+h3{
+	font-size: 2.5em;
+	margin: 0px;
+}
+h4{
+	font-size:2em;
+}
+.desctop ul{
+	margin: 0px;
+	padding: 0px;
+	line-height: 50px;
+}
+.desctop li{
+	display: inline-block;
+}
+.desctop a{
+	line-height: 50px;
+}
+header a{
+	text-decoration: none;
+	font-size: 0.8em;
+	margin-right: 10px;
+	color: #888;
+	font-weight: bold;
+}
+header a:hover{
+	color: orange;
+	text-decoration: none;
+}
+
+.mobile{
+	display: none;
+	position: fixed;
+	background: #fff;
+	width: 100%;
+	margin-left: -35px;
+	margin-top: -10px;
+	z-index: 10;
+}
+.mobile img.logo{
+	width: 50px;
+}
+.iconheader{
+	font-size: 2em;
+}
+.navbar:hover{
+	color: #ec5425;
+}
+.navbar:hover ul{
+	display: block;
+}
+.mobile ul{
+	list-style: none; 	
+	display:  none;
+	position: absolute;
+	left: -170%;
+	z-index: 100;
+	padding: 0px;
+}
+.mobile li{
+	background: #ddd;
+	border: #aaa solid 1px;
+	padding: 5px;
+}
+header .impulse{
+	color: white;
+	padding: 150px 0px;
+	background-image: url(../images/home-bg.jpg);
+	background-size:cover;
+	display: block;
+	background-repeat: no-repeat;
+}
+header .welcome{
+	background: #f7f7f7;
+	padding: 80px 0px;
+	display: block;
+}
+hr {
+	width: 150px;
+	border: solid 1px #ddd;
+}
+header p{
+	font-size: 1em;
+}
+.bgorange{
+	background: #ec5425;
+	color: white;
+	padding: 40px 0px;
+}
+.bgblack{
+	background: black;
+	color: white;
+	padding: 40px 0px;
+}
+.bggray{
+	padding: 40px 0px;
+	background: #eee;
+}
+.bgwhite{
+	padding: 40px 20px;
+}
+.icon{
+	font-size: 2em;
+}
+main .ourTeam{
+	color: white;
+	padding: 80px 0px;
+	background-image: url(../images/team-bg.jpg);
+	background-size:cover;
+	display: block;
+	background-repeat: no-repeat;
+}
+main .array{
+	width: 80%;
+}
+main .team{
+	background: #ec5425;
+	padding: 10px;
+}
+main .team p{
+	margin: 5px;
+	font-weight: 600;
+}
+main .portfolio{
+	background: #f7f7f7;
+	padding: 80px 0px;
+	display: block;
+}
+main .ourPlans{
+	padding: 80px 0px;
+	display: block;
+}
+main .plan{
+	padding: 10px;
+}
+main .plan h3{
+	margin-bottom: 0px;
+	padding: 0px;
+}
+main .plan p{
+	font-size: 0.7em;
+} 
+main .plan a{
+	display: inline-block;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+	background: #fff;
+	border: none;
+	text-decoration: none;
+	color: black;
+}
+main .plan a:hover{
+	background: #eee;
+}
+
+main .bgorange hr{
+	border: solid #ccc 1px;
+	width: 95%;
+}
+main .contactUs{
+	color: white;
+	padding: 80px 40px;
+	background-image: url(../images/contact-bg.jpg);
+	background-size:cover;
+	display: block;
+	background-repeat: no-repeat;
+}
+
+main img{
+	width: 100%;
+	margin-top: 20px;
+}
+
+.black{
+	color: black;
+	font-size: larger;
+}
+input,textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	border: none;
+	padding: 5px;
+}
+textarea{
+	height: 100px;
+}
+main .btn{
+	width: 100%;
+	color: white;
+	cursor: pointer;
+	background: #ec5425;
+	border-radius: 3px;
+	border: none;
+	padding: 5px;
+	font-weight: bold;
+}
+main .btn:hover{
+	background: #fd5425;
+}
+footer .map{
+	height: 250px;
+}
+footer .followUs{
+	color: white;
+	padding: 80px 0px 20px 0px;
+	background: -webkit-linear-gradient(top,#555 0%, #111 100%);
+	display: block;
+}
+footer p{
+	font-size: 1em;
+}
+
+.iconfooter{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background: white;
+	color: #ec5425;
+	font-size: 2em;
+	display: inline-block;
+	margin: 20px 10px;
+}
+.iconfooter:hover{
+	color: #fd5425;
+}
+.orange{
+	color: #ec5425;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 850px){
+	main .plan h4{
+		font-size: 1.5em
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 580px){
+h2{
+	font-size: 2.5em;
+}
+h3{
+	font-size: 2em;
+}
+h4{
+	font-size:1.5em;
+}
+header p{
+	font-size: 0.9em;
+}
+header .impulse{
+	padding: 75px 0px;
+	position: relative;
+	top: 30px;
+}
+header .welcome{
+	padding: 40px 0px;
+}
+
+.mobile{
+	display: flex;
+	align-items:center;
+}
+.desctop{
+	display: none;
+}
+.iconfooter{
+	height: 40px;
+	width: 40px;
+	font-size: 1.5em;
+	display: inline-block;
+	margin: 10px 0px;
+}
+}

@@ -1,0 +1,47 @@
+@font-face{
+	font-family: LandRover;
+	src: url(../fonts/LandRover.ttf);
+}
+div{
+	text-align: center;
+	color: #2388da;
+	width: 23%;
+	display: inline-block;
+	font-family: LandRover;
+	transition:0.5s;
+	padding: 10px;
+}
+div:hover{
+	background: #3280c0;
+	color: white
+}
+span{
+	font-size: 100px;
+	width: 100%;
+	display: block;
+	transition:1s;/*
+	transform:translateY(0);*/
+}
+div:hover span{	
+	animation:move 1s;/*color: red	;
+	transform:translateY(200px);*/
+}
+h2{
+	font-size: 50px;
+	margin-top: 0px;
+}
+p{
+	font-size: 20px;
+}
+
+@keyframes move{
+	from{transform: translateY(-150px);}
+	50%{transform:translateY(50px);}
+	80%{transform:translateY(-20px);}
+	to{transform:translateY(0px);}
+/*
+div:hover h6 {
+	color: red;
+	animation:move 2s;*/
+}
+

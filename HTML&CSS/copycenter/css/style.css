@@ -1,0 +1,118 @@
+header{
+	background: url(../images/fon.jpg);	
+}
+img.logo{
+	width: 30%;
+	float: left;
+}
+p.head{
+	display: inline-block;
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	width: 30%;
+	margin: 30px 0px;
+}
+p.head span{font-size: 64px; font-style: italic;}
+p.head span span{color: #900070}
+p.head span span span{color: red}
+address{
+	color: red;
+	display: inline-block;
+	float: right;
+	width: 25%;
+	font-size: 24px;
+	text-align: right;
+	margin: 20px;
+	font-weight: bold;
+}
+address p span{font-size: 30px}
+input{border-width: 2px; border-color: red;}
+button{background: orange; border: none; font-size: 18px}
+/*--------------------------------NAV-----------------------------------------*/
+nav{
+	background: #a0d000;
+}
+a{
+	text-decoration: none;
+	background: #80ff00;
+	display: inline-block;
+	float: right;
+	font-size: 20px;
+	margin: 10px;
+	padding: 5px;
+}
+/*---------------------------------MAIN----------------------------------------*/
+main{
+	width: 73%;
+	float: left;
+	text-align: center;
+}
+div.article1{
+	width: 30%;
+	float: left;
+}
+img.imgMain{
+	width: 90%;
+	float: right;
+	margin: 10px;
+}
+div.article2{
+	width: 68%;
+	float: left;
+}
+h5{
+	margin: 10px 20px;
+	color: orange;
+	font-size: 24px;
+	text-align: left;
+}
+.text{
+	margin-top: 0px;
+	margin-left: 20px;
+	text-align: justify;
+	font-size: 20px;
+}
+/*--tags for pages---*/
+h1{color: red; font-size: 36px}
+h2{color: gray; font-size: 30px}
+
+img.imgMain1{width: 40%}
+img.imgMain2{width: 80%}
+main span{font-weight: bold;}
+main span span{text-decoration: underline;}
+ul{text-align: left; margin-left: 40px}
+p{font-size: 20px}
+.red{color: red}
+.italic{font-style: italic;}
+/*--------------------------------SIDEBAR-----------------------------------------*/
+#sidebar{
+	width: 25%;
+	float: right;
+	background: -webkit-linear-gradient(left, #afeeee 0%, white 100%);
+	text-align: center;
+}
+h3{
+	background: url(../images/fon2.gif);
+	font-size: 30px;
+	color: white;
+}
+img.imgSidebar{	width: 60%}
+#sidebar p{	  color: blue;	font-size: 24px; margin-bottom: 0px}
+#sidebar span{color: gray; 	font-size: 18px}
+hr{
+	border-color: blue; 
+	border-style: dashed; 
+	border-width: 2px;
+	width: 200px;
+	position: relative;
+	margin: 30px 0px;
+}
+/*-------------------------------------------------------------------------*/
+footer{
+	background: #afeeee; 
+	text-align: center; 
+	padding: 10px; 
+	margin-top: 10px}
+
+

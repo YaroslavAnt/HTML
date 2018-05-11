@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Gallery_1</title>
+
+<style>
+	body{
+		background: moccasin;
+	}
+	.gallery{
+		width: 600px;
+		margin: 0 auto;
+	}
+	h1 span{
+		font-size: 22px;
+		color: #aaa;
+	}
+	img{
+		padding: 5px;
+		box-sizing:border-box;
+	}
+	#big{
+		width: 100%
+	}
+	.flex{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 100px;
+	}
+	.flex img{
+		width: 16%
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	(function($,undefined){
+		$(function(){
+
+			$('img').css({'border':'solid 1px #aaa'});
+			$('.gallery img:not(#big)').on('click', function(){
+				var path=$(this).attr('rel');
+				var text=$(this).attr('alt');
+				$('#name').html('<h1>Illustrations <span> ('+text+')</span></h1>');
+				$('#big').fadeOut(600, function(){
+					$('#big').attr('src', path).fadeIn(600)
+				})						
+			})
+			
+		})
+	})(jQuery);
+</script>
+
+</head>
+
+<body>
+
+<div class="gallery">
+	<div id="name"><h1>Illustrations <span>(Звезда)</span></h1></div>			
+	<img src="images/big/img1-lg.jpg" alt="Звезда"  id="big"/><br/><br/>	
+	<div class="flex">
+		<img src="images/small/img1-thumb.jpg" alt="Звезда" rel="images/big/img1-lg.jpg"/>
+		<img src="images/small/img2-thumb.jpg" alt="Фантазия" rel="images/big/img2-lg.jpg"/>
+		<img src="images/small/img3-thumb.jpg" alt="Экспрессия" rel="images/big/img3-lg.jpg" />
+		<img src="images/small/img4-thumb.jpg" alt="Загадка" rel="images/big/img4-lg.jpg" />
+		<img src="images/small/img5-thumb.jpg" alt="Лицо" rel="images/big/img5-lg.jpg" />
+		<img src="images/small/img6-thumb.jpg" alt="Купальник" rel="images/big/img6-lg.jpg" />
+	</div>
+</div>
+
+</body>
+</html>
